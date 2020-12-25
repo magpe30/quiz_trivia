@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap');
+$primary-color: #E29587;
+$secondary-color: #20002c;
+$text-color: #FFFFFF;
+$font-stack: 'Jost', sans-serif;
+$font-headline: 'Bangers', cursive;
+
+
+%button-shared{
+    font-family: $font-stack;
+    border:none;
+    padding: 0.7rem 1rem;
+    color: $text-color;
+    border-radius: 15px;
+    transform: skew(-20deg);
+    cursor: pointer;
+    outline: none;
+}
+%card-shared{
+    z-index: 1;
+    position:absolute;
+    top: 300px;
+    width: 600px;
+    height: 500px;
+    background: $secondary-color;
+    color: $primary-color;
+    border-radius: 15px;
+    box-shadow: 0 3rem 6rem 1rem rgba(black,0.5);
+}
+
+%text-wrapper{
+    background: inherit; 
+    box-shadow: 6px 6px 9px #D66D75, -6px -6px 10px  #E29587;
+    border-radius: 15px;
+    transform: skew(-15deg);
+    cursor: pointer;
+    color: $secondary-color;
+}
+
+@mixin flexDirection($direction){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin cardMobile(){
+    z-index:1;
+    display:flex;
+    flex-direction: column;
+    align-content: space-around;
+    top: 250px;
+    width: 250px;
+    height: 500px;
+    background: $secondary-color;
+    color: $primary-color;
+    border-radius: 15px;
+    box-shadow: 0 3rem 6rem 1rem rgba(black,0.5);
+}
